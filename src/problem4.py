@@ -37,13 +37,22 @@ def shape(n):
             for a in range(n - (k+1), -1, -1):
                 string = string + " "
             for b in range(1+k):
-                string = string + str(b+1)
+                value = b + 1
+                if value == 10:
+                    value = 0
+                if value > 10:
+                    value = b - 10
+                string = string + str(value)
             string = string + " "
             string = string + "*"
             for c in range(k+1):
                 string = string + "*"
             string = string + " "
             for d in range(n-k):
+                if d > 10:
+                    d = d - 10
+                if d == 10:
+                    d = 0
                 string = string + str(n-d)
             print(string)
             string = ""
