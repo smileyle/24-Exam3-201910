@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Lauren Smiley.  October, 2018.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -32,6 +32,22 @@ def run_test_shape():
 
 
 def shape(n):
+    string = ""
+    for k in range(n):
+            for a in range(n - (k+1), -1, -1):
+                string = string + " "
+            for b in range(1+k):
+                string = string + str(b+1)
+            string = string + " "
+            string = string + "*"
+            for c in range(k+1):
+                string = string + "*"
+            string = string + " "
+            for d in range(n-k):
+                string = string + str(n-d)
+            print(string)
+            string = ""
+
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
