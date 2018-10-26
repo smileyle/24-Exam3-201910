@@ -48,12 +48,12 @@ def shape(n):
             for c in range(k+1):
                 string = string + "*"
             string = string + " "
-            for d in range(n-k):
+            for d in range(n-k, 0, -1):
                 if d > 10:
                     d = d - 10
                 if d == 10:
                     d = 0
-                string = string + str(n-d)
+                string = string + str(d)
             print(string)
             string = ""
 
